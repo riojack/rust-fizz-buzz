@@ -14,32 +14,32 @@ mod tests {
     use crate::fizzbuzz::fizz::fizzbuzz;
 
     #[test]
-    fn withThreeReturnsFizz() {
+    fn with_three_returns_fizz() {
         assert_eq!(fizzbuzz(3), "fizz");
     }
 
     #[test]
-    fn withFiveReturnsBuzz() {
+    fn with_five_returns_buzz() {
         assert_eq!(fizzbuzz(5), "buzz");
     }
 
     #[test]
-    fn withZeroReturnsZero() {
+    fn with_zero_returns_zero() {
         assert_eq!(fizzbuzz(0), "0");
     }
 
     #[test]
-    fn withSixReturnsFizz() {
+    fn with_six_returns_fizz() {
         assert_eq!(fizzbuzz(6), "fizz");
     }
 
     #[test]
-    fn withTenReturnsBuzz() {
+    fn with_ten_returns_buzz() {
         assert_eq!(fizzbuzz(10), "buzz");
     }
 
     #[test]
-    fn withFifteenReturnsFizzBuzz() {
+    fn with_fifteen_returns_fizz_buzz() {
         assert_eq!(fizzbuzz(15), "fizzbuzz");
     }
 }
