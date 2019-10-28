@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn fizzbuzz(num: usize) -> String {
     match num {
         0 => String::from("0"),
