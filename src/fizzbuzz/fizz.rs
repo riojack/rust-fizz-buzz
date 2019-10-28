@@ -1,17 +1,11 @@
 pub fn fizzbuzz(num: usize) -> String {
-    if num != 0 && num % 15 == 0 {
-        return String::from("fizzbuzz");
+    match num {
+        0 => String::from("0"),
+        x if x % 3 == 0 && x % 5 == 0 => String::from("fizzbuzz"),
+        x if x % 3 == 0 => String::from("fizz"),
+        x if x % 5 == 0 => String::from("buzz"),
+        _ => format!("{num}", num = num)
     }
-
-    if num != 0 && num % 3 == 0 {
-        return String::from("fizz");
-    }
-
-    if num != 0 && num % 5 == 0 {
-        return String::from("buzz");
-    }
-
-    format!("{num}", num = num)
 }
 
 #[cfg(test)]
