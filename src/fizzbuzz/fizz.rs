@@ -2,7 +2,12 @@ pub fn fizzbuzz(num: usize) -> String {
     if num == 3 {
         return String::from("fizz");
     }
-    String::from("buzz")
+
+    if num == 5 {
+        return String::from("buzz");
+    }
+
+    format!("{num}", num = num)
 }
 
 #[cfg(test)]
@@ -17,5 +22,10 @@ mod tests {
     #[test]
     fn withFiveReturnsBuzz() {
         assert_eq!(fizzbuzz(5), "buzz");
+    }
+
+    #[test]
+    fn withZeroReturnsZero() {
+        assert_eq!(fizzbuzz(0), "0");
     }
 }
