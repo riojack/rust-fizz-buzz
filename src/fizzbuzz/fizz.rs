@@ -1,4 +1,8 @@
 pub fn fizzbuzz(num: usize) -> String {
+    if num != 0 && num % 15 == 0 {
+        return String::from("fizzbuzz");
+    }
+
     if num != 0 && num % 3 == 0 {
         return String::from("fizz");
     }
@@ -37,5 +41,10 @@ mod tests {
     #[test]
     fn withTenReturnsBuzz() {
         assert_eq!(fizzbuzz(10), "buzz");
+    }
+
+    #[test]
+    fn withFifteenReturnsFizzBuzz() {
+        assert_eq!(fizzbuzz(15), "fizzbuzz");
     }
 }
